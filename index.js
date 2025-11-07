@@ -41,6 +41,10 @@ app.get('/api/hello-secure', authRequired, (req, res) => {
   res.json({ hi: `Hello ${req.user.email}!` });
 });
 
+app.get('/api/me', authRequired, (req, res) => {
+  res.json({ id: req.user.id, email: req.user.email, role: req.user.role });
+});
+
 
 // 健康檢查
 app.get('/health', (req, res) => {
