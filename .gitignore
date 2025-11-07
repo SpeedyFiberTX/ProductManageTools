@@ -3,3 +3,6 @@ node_modules/
 
 # 忽略環境變數檔案
 .env
+
+# 忽略output
+output/
